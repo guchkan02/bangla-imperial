@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bangla Imperial Rubber Pvt. Ltd.</title>
+    <link rel="icon" type="image/x-icon" href="https://res.cloudinary.com/psdesignz4u/image/upload/v1690437315/Bangla%20Imperial/favicon_breazo.png">
+    <!-- Link Swiper's CSS -->
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <style>
+        html,
+        body {
+            position: relative;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        body {
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        .swiper-container {
+            width: auto;
+            height: 100%;
+        }
+        @media only screen{
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+
+            /* Center slide text vertically */
+            
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            flex-direction: column;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+            overflow-y: scroll;
+            background: url('https://res.cloudinary.com/psdesignz4u/image/upload/v1690437317/Bangla%20Imperial/background-01_qif72k.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100vw;
+            height: 100vh;
+        }
+        }
+        @media only screen and (max-width: 991px){
+            .swiper-slide{
+                text-align: center;
+                /* width: 100%;
+                height: auto; */
+                width: 100vw;
+            height: 100vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+        }
+
+        /* custmm bullets style */
+        .swiper-pagination-bullet {
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            line-height: 20px;
+            font-size: 12px;
+            color: #fff;
+            opacity: 1;
+            background: #000
+        }
+
+        .swiper-pagination-bullet-active {
+            /* content:url(.images/Asset 1.png); */
+            color: #fff;
+            background: #da2638;
+        }
+
+        #loader{
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            background: #fff url('https://res.cloudinary.com/psdesignz4u/image/upload/v1690437074/Bangla%20Imperial/Logo-loader_vtdkyf.gif') no-repeat center;
+            z-index: 999;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="loader"></div>
+    <!-- Swiper -->
+    <div id="content">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"> 
+                    <img src="https://res.cloudinary.com/psdesignz4u/image/upload/v1690391073/Bangla%20Imperial/Cover_klsotv.png" alt="" width="80%" height="auto">
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://res.cloudinary.com/psdesignz4u/image/upload/v1690391074/Bangla%20Imperial/Page_2_zbyvo0.png" alt="" width="80%" height="auto">
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://res.cloudinary.com/psdesignz4u/image/upload/v1690391074/Bangla%20Imperial/Page_3_ohu1q7.png" alt="" width="80%" height="auto">
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://res.cloudinary.com/psdesignz4u/image/upload/v1690391073/Bangla%20Imperial/Page_4_q7ceqh.png" alt="" width="80%" height="auto">
+                </div>
+                <div class="swiper-slide"> 
+                    <img src="https://res.cloudinary.com/psdesignz4u/image/upload/v1690391075/Bangla%20Imperial/Page_5_gmlciv.png" alt="" width="80%" height="auto">
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://res.cloudinary.com/psdesignz4u/image/upload/v1690391074/Bangla%20Imperial/Page_6_rpm3de.png" alt="" width="80%" height="auto">
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://res.cloudinary.com/psdesignz4u/image/upload/v1690391074/Bangla%20Imperial/Page_7_qxqcqb.png" alt="" width="80%" height="auto">
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://res.cloudinary.com/psdesignz4u/image/upload/v1690391075/Bangla%20Imperial/Back_ot91nc.png" alt="" width="80%" height="auto">
+                </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next" style="color: #ffe7e3;"></div>
+            <div class="swiper-button-prev" style="color: #ffe7e3;"></div>
+        </div>
+    </div>
+    
+
+    <!-- Swiper JS -->
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            spaceBetween: 30,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                renderBullet: function (index, className) {
+                    return '<span class="' + className + '">' + (index + 1) + '</span>';
+                },
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+        // Listen for orientation changes
+        window.addEventListener("orientationchange", function () {
+            verifyCurrentOrientationMode(true);
+        }, false);
+        verifyCurrentOrientationMode();
+        function verifyCurrentOrientationMode(hasChanged = false) {
+            let currentMode = null;
+            if (window.matchMedia("(orientation: portrait)").matches) {
+                if (hasChanged) {
+                    currentMode = 'Landscape';
+                } else {
+                    currentMode = 'Portrait';
+                }
+            }
+            if (window.matchMedia("(orientation: landscape)").matches) {
+                if (hasChanged) {
+                    currentMode = 'Portrait';
+                } else {
+                    currentMode = 'Landscape';
+                }
+            }
+            if (currentMode === 'Landscape') {
+                // Determine height
+            }
+        }
+
+
+        var preloader = document.getElementById('loader');
+        function preLoaderHandler(){
+            preloader.style.display = 'none';
+        }
+
+        window.onload = function() {
+            setTimeout(function() {
+                preLoaderHandler();
+            },4000); 
+        };
+    </script>
+</body>
+
+</html>
